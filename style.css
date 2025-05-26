@@ -1,0 +1,222 @@
+/* Importação de fontes do Google Fonts para um visual mais agradável */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lora:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #4CAF50; /* Verde do Campo */
+    --cor-secundaria: #3F51B5; /* Azul da Cidade */
+    --cor-fundo: #f0f0f0;
+    --cor-texto: #333;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Hero Section (Introdução) */
+.hero-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px var(--cor-sombra);
+}
+
+.hero-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Seção Desafios e Oportunidades */
+#desafios-oportunidades {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--cor-sombra);
+    padding: 30px;
+    flex: 1; /* Permite que os cards se expandam */
+    min-width: 300px; /* Garante um tamanho mínimo para os cards */
+    max-width: 45%; /* Ajusta a largura máxima para ter dois cards por linha */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-family: 'Lora', serif;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 10px;
+}
+
+.card ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+}
+
+.card ul li {
+    margin-bottom: 15px;
+    padding-left: 25px; /* Espaço para o ícone customizado */
+    position: relative;
+}
+
+.card ul li::before {
+    content: '•'; /* Ícone de marcador customizado */
+    color: var(--cor-primaria); /* Cor do ícone */
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+/* Seção Influência Cultural */
+#influencia-cultural {
+    padding: 60px 0;
+    text-align: center;
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+#influencia-cultural h2 {
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px var(--cor-sombra);
+}
+
+#influencia-cultural p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Para garantir que não tenha sublinhado se for um link */
+    display: inline-block; /* Para o padding funcionar corretamente */
+}
+
+.btn:hover {
+    background-color: #30419A;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-secundaria);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-image {
+        max-width: 90%;
+    }
+
+    .card {
+        max-width: 90%; /* Em telas menores, os cards ocupam mais espaço */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .hero-section p {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    #influencia-cultural h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
